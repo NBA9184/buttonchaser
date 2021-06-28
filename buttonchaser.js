@@ -2,7 +2,7 @@ var score = 0;
 var aWidth;
 var aHeight;
 var timer;
-var interations;
+var interations = 0;
 
 window.addEventListener("load", setGameAreaBounds);
 
@@ -30,5 +30,11 @@ function moveDot() {
   if (y < 10) y = 10;
   document.getElementById("dot").style.left = x + "px";
   document.getElementById("dot").style.top = y + "px";
-  if (interations < 30) timer = setTimeout(moveDot, 1000);
+  if (interations < 30) timer = setTimeout("moveDot()", 1000);
+  else {
+    document.getElementById("scoreLabel").innerHTML += "     Game Over!!!";
+    document.getElementById("dot").removeEventListener("click", detectHit);
+    clearTimeout(timer);
+  }
+  interations++;
 }
