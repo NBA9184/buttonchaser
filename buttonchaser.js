@@ -19,7 +19,8 @@ function setGameAreaBounds() {
 
 function detectHit() {
   score += 1;
-  document.getElementById("scorlabel").innerHTML = "score: " + score;
+  console.log("button clicked");
+  document.getElementById("scoreLabel").innerHTML = "score: " + score;
 }
 
 function moveDot() {
