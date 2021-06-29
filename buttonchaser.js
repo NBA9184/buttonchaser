@@ -32,7 +32,8 @@ function moveDot() {
   document.getElementById("dot").style.top = y + "px";
   if (interations < 30) timer = setTimeout("moveDot()", 1000);
   else {
-    document.getElementById("scoreLabel").innerHTML += "     Game Over!!!";
+    document.getElementById("scoreLabel").innerHTML +=
+      "     Game Over!!! reload to play again";
     document.getElementById("dot").removeEventListener("click", detectHit);
     clearTimeout(timer);
   }
