@@ -32,3 +32,6 @@
   width: 64px;
   height: 64px;
 }
+body {
+  touch-action: manipulation;
+}
