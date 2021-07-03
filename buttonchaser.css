@@ -31,4 +31,5 @@
   background-color: navy;
   width: 64px;
   height: 64px;
+  touch-action: manipulation;
 }
